@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>통합이벤트</title>
+  <link rel="icon" href="https://i.imgur.com/7wxTffG.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* 상단 고정 영역 */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 9999;
+    }
+
+    .top-nav {
+      padding: 10pt 0 0 40pt;
+      font-size: 40pt;
+      font-weight: bold;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #333;
+      margin-right: 20px;
+    }
+
+    .top-nav a:hover {
+      color: #007BFF;
+    }
+
+    .divider {
+      height: 4pt;
+      background-color: #ccc;
+      margin-top: 10pt;
+    }
+
+    /* 아래 iframe 내용은 헤더만큼 아래로 밀어줌 */
+    .content {
+      margin-top: 100pt; /* 헤더 높이만큼 공간 확보 */
+    }
+
+    iframe {
+      width: 1500pt;
+      height: 1500pt;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 고정된 상단 영역 -->
+  <div class="fixed-header">
+    <div class="top-nav">
+      <a href="spdiframe.html" target="contentFrame">스피드</a> /
+      <a href="okiframe.html" target="contentFrame">오케이</a>
+    </div>
+    <div class="divider"></div>
+  </div>
+
+  <!-- 아래 본문 영역 -->
+  <div class="content">
+    <iframe 
+      src="okiframe.html" 
+      name="contentFrame">
+    </iframe>
+  </div>
+
+</body>
+</html>
